@@ -268,20 +268,27 @@ h3 {
   transform: scale(1.03);
 }
 
-/* Soft left fade into section bg — desktop only */
+/* Soft left dissolve into section bg via mask — desktop only */
 @media (min-width: 981px) {
   .hero__photo {
-    position: relative;
+    background: transparent;
   }
 
-  .hero__photo::after {
-    content: "";
-    position: absolute;
-    inset: 0 auto 0 0;
-    width: 100px;
-    pointer-events: none;
-    z-index: 1;
-    background: linear-gradient(to right, var(--bg) 0%, transparent 100%);
+  .hero__photo img {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      rgba(0, 0, 0, 0.25) 28px,
+      rgba(0, 0, 0, 0.75) 58px,
+      #000 90px
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      rgba(0, 0, 0, 0.25) 28px,
+      rgba(0, 0, 0, 0.75) 58px,
+      #000 90px
+    );
   }
 }
 
