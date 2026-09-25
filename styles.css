@@ -304,20 +304,21 @@ h3 {
     overflow: hidden;
   }
 
-  /* Soft left dissolve into section bg — narrow, no white wash */
+  /* Short left dissolve into section bg — one veil, no white wash */
   .hero__photo::after {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    width: 68px;
+    width: 72px;
     pointer-events: none;
     z-index: 1;
     background: linear-gradient(
       to right,
       var(--bg) 0%,
-      color-mix(in srgb, var(--bg) 55%, transparent) 38%,
+      color-mix(in srgb, var(--bg) 34%, transparent) 14%,
+      color-mix(in srgb, var(--bg) 8%, transparent) 42%,
       transparent 100%
     );
   }
