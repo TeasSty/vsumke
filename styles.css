@@ -271,23 +271,25 @@ h3 {
 /* Soft left dissolve into section bg via mask — desktop only */
 @media (min-width: 981px) {
   .hero__photo {
-    background: transparent;
+    background: var(--bg);
   }
 
   .hero__photo img {
     -webkit-mask-image: linear-gradient(
       to right,
-      transparent 0,
-      rgba(0, 0, 0, 0.25) 28px,
-      rgba(0, 0, 0, 0.75) 58px,
-      #000 90px
+      transparent 0%,
+      rgba(0, 0, 0, 0.25) 6%,
+      rgba(0, 0, 0, 0.75) 12%,
+      #000 18%,
+      #000 100%
     );
     mask-image: linear-gradient(
       to right,
-      transparent 0,
-      rgba(0, 0, 0, 0.25) 28px,
-      rgba(0, 0, 0, 0.75) 58px,
-      #000 90px
+      transparent 0%,
+      rgba(0, 0, 0, 0.25) 6%,
+      rgba(0, 0, 0, 0.75) 12%,
+      #000 18%,
+      #000 100%
     );
   }
 }
